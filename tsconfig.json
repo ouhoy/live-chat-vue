@@ -1,5 +1,11 @@
 {
   "files": [],
+  "compilerOptions": {
+    "types": [
+      "vite/client"
+    ],
+    "target": "ESNext"
+  },
   "references": [
     {
       "path": "./tsconfig.node.json"

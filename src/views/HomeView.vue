@@ -1,9 +1,19 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <div class="welcome container">
+      <p>Welcome</p>
+    </div>
   </main>
 </template>
+
+<style>
+
+ .welcome {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+</style>
