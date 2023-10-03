@@ -2,13 +2,17 @@
 
 
 import {ref} from "vue";
+import useSignup from "../composables/useSignup";
 
 const displayName = ref("");
 const email = ref("")
 const password = ref("")
 
-function handleSubmit() {
+const {error, signup} = useSignup()
 
+async function handleSubmit() {
+
+  await signup(email.value, password.value, displayName.value)
 }
 
 
