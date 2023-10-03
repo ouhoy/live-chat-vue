@@ -8,12 +8,14 @@ const email = ref("")
 const password = ref("")
 
 const {error, login} = useLogin()
+const emit = defineEmits();
 
 async function handleSubmit() {
 
   await login(email.value, password.value);
   if (!error.value) {
     console.log("User LoggedIn")
+    emit('login')
   }
 
 }

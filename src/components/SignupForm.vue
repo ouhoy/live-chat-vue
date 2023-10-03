@@ -9,10 +9,15 @@ const email = ref("")
 const password = ref("")
 
 const {error, signup} = useSignup()
+const emit = defineEmits();
 
 async function handleSubmit() {
 
   await signup(email.value, password.value, displayName.value)
+  if(!error.value) {
+    emit('signup')
+
+  }
 }
 
 
