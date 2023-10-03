@@ -24,11 +24,16 @@ async function handleSubmit() {
     <input type="text" required placeholder="display name" v-model="displayName">
     <input type="email" required placeholder="email" v-model="email">
     <input type="password" required placeholder="password" v-model="password">
+    <div class="error">
+      <p>{{ error }}</p>
+    </div>
     <button>Sign up</button>
   </form>
 
 </template>
 
-<style scoped>
-
+<style >
+.error {
+  color: red
+}
 </style>
