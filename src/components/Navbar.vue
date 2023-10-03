@@ -2,7 +2,6 @@
 
 import useLogout from "@/composables/useLogout";
 import getUser from "@/composables/getUser";
-import router from "@/router";
 
 const {error, logout} = useLogout()
 const {user} = getUser()
@@ -10,9 +9,7 @@ const {user} = getUser()
 
 async function handleLogout() {
   await logout();
-  if (!error.value) {
-    await router.push({name: "home"})
-  }
+
 }
 
 </script>
